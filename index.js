@@ -86,12 +86,19 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(){
-
+function finalScore(inning,num){
+  let home = 0 // set home var to 0
+  let away = 0 // set away var to 0
+  let score = {Home: home, Away: away} // create obj called score with properties
   
-
-}
-
+    for(let i=0; i < num;i++){
+        score.Home = score.Home + inning()
+        score.Away = score.Away + inning()
+    }
+    return score
+  
+ }
+console.log(finalScore(inning,9));
 
 
 /* Task 4: 
@@ -115,8 +122,22 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+
+function getInningScore(){
+  let innings=['1st inning','2nd inning','3rd inning','4th inning','5th inning','6th inning',
+'7th inning','8th inning','9th inning'];
+  
+for(let i=0;i<innings.length;i++)
+        return innings;
+
 }
+
+
+function scoreboard(getInningScore,inning,num2,) {
+
+
+  
+}
+scoreboard(getInningScore,inning,9);
 
 
