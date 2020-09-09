@@ -123,17 +123,35 @@ Final Score: awayTeam - homeTeam */
 
 
 
-function getInningScore(){
-  let innings=['1st inning','2nd inning','3rd inning','4th inning','5th inning','6th inning',
-'7th inning','8th inning','9th inning'];
-  
-for(let i=0;i<innings.length;i++)
-        return innings;
+function getInningScore(inning){
+ 
 
+let awayTeam=0;
+let homeTeam=0;
+let inningscore={
+  home:homeTeam,
+  away:awayTeam,
 }
 
 
-function scoreboard(getInningScore,inning,num2,) {
+for(let i=0; i < 10;i++){
+  inningscore.home = inningscore.home+ inning()
+  inningscore.away= inningscore.away+ inning()
+}
+
+return inningscore
+
+}
+
+console.log(getInningScore(inning));
+
+
+function scoreboard(getInningScore,inning,num3) {
+
+  for (let i=0;i < num3;i++){
+
+    getInningScore[i]
+  }
 
 
   
