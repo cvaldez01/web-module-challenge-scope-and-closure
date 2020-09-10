@@ -126,18 +126,18 @@ Final Score: awayTeam - homeTeam */
 function getInningScore(inning){
  
 
-let awayTeam=0;
-let homeTeam=0;
+let awayTeam=inning();
+let homeTeam=inning();
 let inningscore={
   home:homeTeam,
   away:awayTeam,
 }
 
 
-for(let i=0; i < 10;i++){
-  inningscore.home = inningscore.home+ inning()
-  inningscore.away= inningscore.away+ inning()
-}
+// for(let i=0; i < 10;i++){
+//   inningscore.home = inningscore.home+ inning()
+//   inningscore.away= inningscore.away+ inning()
+// }
 
 return inningscore
 
@@ -148,9 +148,13 @@ console.log(getInningScore(inning));
 
 function scoreboard(getInningScore,inning,num3) {
 
+  let homescore=0;
+  let awayscore=0;
+  
   for (let i=0;i < num3;i++){
-
-    getInningScore[i]
+  let currentInning=getInningScore(inning);  
+      
+    
   }
 
 
