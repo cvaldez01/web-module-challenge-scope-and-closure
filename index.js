@@ -151,15 +151,19 @@ function scoreboard(getInningScore,inning,num3) {
   let homescore=0;
   let awayscore=0;
   
-  for (let i=0;i < num3;i++){
-  let currentInning=getInningScore(inning);  
-      
-    
-  }
 
+  for (let i=0;i < num3;i++){
+  let currentInning=getInningScore(inning);
+  homescore=homescore + currentInning.home
+  awayscore=awayscore + currentInning.away
+  
+   console.log(` Inning ${i+1}: ${awayscore} - ${homescore}`)
+
+  }
+    return `Final Score:${awayscore} - ${homescore}`;
 
   
 }
-scoreboard(getInningScore,inning,9);
+console.log(scoreboard(getInningScore,inning,9));
 
 
